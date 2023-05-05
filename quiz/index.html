@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Quiz Game</title>
+	<link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+	<header>
+		<h1>Quiz Game</h1>
+		<p>Teste seus conhecimentos em diversos temas!</p>
+	</header>
+
+	<main>
+		<div class="question-container">
+			<h2 class="question">Questão 1:</h2>
+			<p class="question-text">Qual é a capital da França?</p>
+			<ul class="answer-options">
+				<li><input type="radio" name="answer" value="a" id="a"><label for="a">Roma</label></li>
+				<li><input type="radio" name="answer" value="b" id="b"><label for="b">Londres</label></li>
+				<li><input type="radio" name="answer" value="c" id="c"><label for="c">Paris</label></li>
+				<li><input type="radio" name="answer" value="d" id="d"><label for="d">Berlim</label></li>
+			</ul>
+		</div>
+
+		<div class="timer-container">
+			<p>Tempo restante: <span class="time-left">10</span> segundos</p>
+		</div>
+
+		<div class="button-container">
+			<button id="submit-button">Responder</button>
+			<button id="next-button" disabled>Próxima</button>
+			<button id="restart-button" disabled>Reiniciar</button>
+		</div>
+
+		<div class="result-container">
+			<h2 class="result"></h2>
+		</div>
+
+	</main>
+
+	<script src="script.js"></script>
+</body>
+</html>
