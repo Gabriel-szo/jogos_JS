@@ -1,58 +1,39 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Quiz Game</title>
-    <link rel="stylesheet" type="text/css" href="index.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Quiz App</title>
   </head>
   <body>
-    <header>
-      <h1>Quiz Game</h1>
-      <p>Teste seus conhecimentos em diversos temas!</p>
-    </header>
+    <div class="quiz-container" id="quiz">
+      <div class="quiz-header">
+        <h2 id="question">Question text</h2>
+        <ul>
+          <li>
+            <input type="radio" name="answer" id="a" class="answer">
+            <label for="a" id="a_text">Question</label>
+          </li>
 
-    <main>
-      <div class="question-container">
-        <h2 class="question">Questão 1:</h2>
-        <p class="question-text">Qual é a capital da França?</p>
-        <ul class="answer-options">
           <li>
-            <input type="radio" name="answer" value="a" id="a" /><label for="a"
-              >Roma</label
-            >
+            <input type="radio" name="answer" id="b" class="answer">
+            <label for="b" id="b_text">Question</label>
           </li>
+
           <li>
-            <input type="radio" name="answer" value="b" id="b" /><label for="b"
-              >Londres</label
-            >
+            <input type="radio" name="answer" id="c" class="answer">
+            <label for="c" id="c_text">Question</label>
           </li>
+
           <li>
-            <input type="radio" name="answer" value="c" id="c" /><label for="c"
-              >Paris</label
-            >
-          </li>
-          <li>
-            <input type="radio" name="answer" value="d" id="d" /><label for="d"
-              >Berlim</label
-            >
+            <input type="radio" name="answer" id="d" class="answer">
+            <label for="d" id="d_text">Question</label>
           </li>
         </ul>
       </div>
-
-      <div class="timer-container">
-        <p>Tempo restante: <span class="time-left">10</span> segundos</p>
-      </div>
-
-      <div class="button-container">
-        <button id="submit-button">Responder</button>
-        <button id="next-button" disabled>Próxima</button>
-        <button id="restart-button" disabled>Reiniciar</button>
-      </div>
-
-      <div class="result-container">
-        <h2 class="result"></h2>
-      </div>
-    </main>
-
+      <button id="submit">Submit</button>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>

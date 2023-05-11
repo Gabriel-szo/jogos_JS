@@ -1,37 +1,98 @@
-<!doctype html>
-<html lang="en">
-
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
-
-    <title>Memory Game using JavaScript - @code.scientist x @codingtorque</title>
-</head>
-
-<body>
-
-    <main class="content">
-        <header class="header">
-            <h1 class="title">Memory Game</h1>
-            <div class="movement">
-                <h6 class="subtitle">Movements</h6>
-                <div class="available" id="available"></div>
-            </div>
-        </header>
-        <section class="card-container"></section>
-    </main>
-    <div class="modal" id="modal">
-        <div class="modal-container">
-            <h3 class="modal-title" id="modal-title">You win!</h3>
-            <button type="button" class="button" id="play-again">Play Again</button>
-        </div>
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jogo da Memoria</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link
+      rel="shortcut icon"
+      href="https://image.flaticon.com/icons/svg/3132/3132772.svg"
+      type="image/x-icon"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/card.css" />
+    <link rel="stylesheet" href="styles/win.css" />
+  </head>
+  <body>
+    <header>
+      <h1>JOGO DA MEMÓRIA</h1>
+      <nav>
+        <!--<a href="/">DECKS</a>
+        <a href="/">SOBRE</a>-->
+      </nav>
+    </header>
+    <!--ALTERAÇÃO* Essa div vai ser exibida quando o jogador vencer a partida!-->
+    <div id="vitoria">
+      <div id="container">
+        <h1>Parabéns!</h1>
+        <p>Você encontrou todos os pares com</p>
+        <h2><span id="movimentosvitoria">0</span> ERROS</h2>
+        <a href="index.html">Jogar denovo</a>
+      </div>
     </div>
+    <div class="corpo">
+      <section id="esq">
+        <h2>Erros <span id="movimentos">0</span></h2>
+        <!-- <button id="btn-mudartema">Mudar tema</button>
+            <button id="btn-reiniciar">Reiniciar</button> -->
+        <a href="index.html">Reiniciar</a>
+      </section>
 
-    <script src="script.js"></script>
-</body>
+      <section class="jogo">
+        <div class="card" data-nome="sapo">
+          <img class="frente" src="src/frog.png" alt="card" />
+        </div>
+        <div class="card" data-nome="sapo">
+          <img class="frente" src="src/frog.png" alt="card" />
+        </div>
 
+        <div class="card" data-nome="vaca">
+          <img class="frente" src="src/cow.png" alt="card" />
+        </div>
+        <div class="card" data-nome="vaca">
+          <img class="frente" src="src/cow.png" alt="card" />
+        </div>
+
+        <div class="card" data-nome="canguru">
+          <img class="frente" src="src/kangaroo.png" alt="card" />
+        </div>
+        <div class="card" data-nome="canguru">
+          <img class="frente" src="src/kangaroo.png" alt="card" />
+        </div>
+
+        <div class="card" data-nome="leao">
+          <img class="frente" src="src/lion.png" alt="card" />
+        </div>
+        <div class="card" data-nome="leao">
+          <img class="frente" src="src/lion.png" alt="card" />
+        </div>
+
+        <div class="card" data-nome="passaro">
+          <img class="frente" src="src/bird.png" alt="card" />
+        </div>
+        <div class="card" data-nome="passaro">
+          <img class="frente" src="src/bird.png" alt="card" />
+        </div>
+
+        <div class="card" data-nome="elefante">
+          <img class="frente" src="src/elephant.png" alt="card" />
+        </div>
+        <div class="card" data-nome="elefante">
+          <img class="frente" src="src/elephant.png" alt="card" />
+        </div>
+      </section>
+
+      <section id="dir"></section>
+    </div>
+    <script src="scripts/index.js"></script>
+  </body>
 </html>
